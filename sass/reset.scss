@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before{
+    content: '';
+    position: absolute;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    background: $color7 !important;
+}
+
+img,svg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

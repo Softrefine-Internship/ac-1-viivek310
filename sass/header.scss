@@ -1,0 +1,83 @@
+.header{
+    @include flex-center;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 0 2rem;
+
+    &__left{
+        @include flex-center(8rem);
+        height: 100%;
+
+        &--hamburger{
+            height: 70%;
+        }
+
+        &--hamburger svg{
+             height: 100%;
+             width: 100%;
+        }
+
+        &--logo{
+            font-size: 3rem;
+            font-weight: bold;
+            
+        }
+
+        &--searchbar{
+            height: 100%;
+            
+            input{
+                height: 100%;
+                border: none;
+                width: 25vw ;
+                border-radius: 100px;
+                padding: 2rem;
+                padding-left: 4rem;
+                font-size: 1.3rem;
+                outline: none;
+            }
+        }
+
+            
+    }
+    &__right{
+        height: inherit;
+        @include flex-center(2rem);
+        & > *{
+            display: flex;
+        }
+        &--line{
+            width: 1px;
+            height: 100%;
+            background: rgba(88, 88, 88, 0.51);
+        }
+
+        &--notification{
+            position: relative;
+            
+            &::before{
+                height: 1rem;
+                width: 1rem;
+                background: red;
+                border-radius: 50%;
+                right: 2px;
+            }
+        }
+
+        &--image{
+            height: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &--user{
+            font-size: 2rem;
+            font-weight: bold
+        }
+        svg{
+            height: 3rem;
+            width: 3rem;
+            // aspect-ratio: 1 / 1;
+        }
+    }
+}
