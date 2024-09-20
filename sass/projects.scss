@@ -1,6 +1,68 @@
 .projects{
     width: 65%;
-    height: 102%;
-    background: $color3;
+    height: 100%;
+    background: darken($color3, 1%);
     border-radius: 3rem 3rem 0 0 ;
+    padding-inline: 5rem;
+    
+
+    
+
+    &__heading{
+        @include flex-center();
+        justify-content: space-between;
+        padding-block: 3rem;
+
+        &--h2{
+            font-size: 2.5rem;
+            font-weight: bold
+        }
+
+        &--date{
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+    }
+
+    &__statistics{
+        @include flex(5rem);
+        // align-items: center; 
+
+        &-item{
+            &--number{
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
+
+            &--detail{
+                font-size: 1.2rem;
+            }
+        }
+
+        &-nav{
+            display: flex;
+            gap: 1rem;
+            margin-left: auto;
+            &--hamburger{
+                margin-left: auto;
+                scale: 1.1;
+            }
+            align-items: center;
+    
+            &--more{
+                margin-left: auto;
+                height: 1.7rem;
+                width: 1.7rem;
+                display: flex;
+                flex-wrap: wrap;
+                &-child{
+                    // flex-shrink: 0;
+                    height: .7rem;
+                    width: .7rem;
+                    border: .3rem solid black;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
 }

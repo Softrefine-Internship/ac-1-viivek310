@@ -10,6 +10,7 @@
 
         &--hamburger{
             height: 70%;
+            cursor: pointer;
         }
 
         &--hamburger svg{
@@ -20,7 +21,7 @@
         &--logo{
             font-size: 3rem;
             font-weight: bold;
-            
+            cursor: pointer;
         }
 
         &--searchbar{
@@ -52,8 +53,22 @@
             background: rgba(88, 88, 88, 0.51);
         }
 
+        &--plusIcon{
+            svg{
+                transition: all .5s;
+                cursor: pointer;
+            }
+        }
+
+        &--plusIcon:hover {
+            svg{
+                transform: scale(1.2);
+            }
+        }
+
         &--notification{
             position: relative;
+            cursor: pointer;
             
             &::before{
                 height: 1rem;
@@ -61,6 +76,12 @@
                 background: red;
                 border-radius: 50%;
                 right: 2px;
+            }
+
+            &:hover{
+                // transform: rotate(20deg);
+                transform-origin: top;
+                animation: ring .5s ease-out .2s 3 alternate;
             }
         }
 
