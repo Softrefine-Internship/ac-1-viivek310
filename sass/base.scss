@@ -6,10 +6,17 @@
     margin: 0 auto;
     border-radius: 3rem;
     box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.174);
-    padding: 2rem;
+    padding-top: 2rem;
     margin: 5rem;
     padding-bottom: 0;
     // overflow: hidden;
+    @media (max-width: 800px){
+        margin: 0;
+        width: 100%;
+    }
+    @media (max-width: 800px){
+        min-height: 100svh;
+    }
 }
 
 .main-container{
@@ -23,7 +30,7 @@
 .content{
     width: 100%;
     padding-top: 2rem;
-    padding-inline: 2rem;
+    display: flex
 }
 
 .projects-container{
@@ -33,11 +40,18 @@
     padding-block: 5rem;
     flex-wrap: wrap;
     gap: 5rem;
-    overflow: auto;
+    // overflow: auto;
+    overflow-y: auto;
     align-content: baseline;
     &::-webkit-scrollbar {
         display: none;
       }
+
+
+    @media (max-width: 1000px){
+        padding-block: 3rem;
+        gap: 3rem;
+    }
 }
 
-  
+

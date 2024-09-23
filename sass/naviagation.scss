@@ -1,11 +1,15 @@
 .navigation{
     min-height: 80svh;
-    width: 8rem;
-    padding-block: 6rem;
-    // display: inline;
+    width: 10rem;
+    padding: 6rem 3rem;
+
+    @media(max-width: 420px){
+        width: 8rem;
+        padding: 6rem 1rem;
+    }
 
     &__icon{
-        width: 40%;
+        width: 3rem;
         aspect-ratio: 1/1;
         margin: 0 auto;
         margin-bottom: 3.3rem;

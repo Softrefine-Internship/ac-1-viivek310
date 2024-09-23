@@ -1,76 +1,113 @@
-.header{
+.header {
     @include flex-center;
     justify-content: space-between;
     height: 4rem;
     padding: 0 2rem;
 
-    &__left{
+    &__left {
         @include flex-center(8rem);
         height: 100%;
 
-        &--hamburger{
+        @media (max-width: 1000px) {
+            gap: 5rem;
+        }
+
+        @media (max-width: 750px) {
+            gap: 2rem;
+        }
+
+        @media (max-width: 420px) {
+            gap: 1rem;
+        }
+
+        &--hamburger {
             height: 70%;
             cursor: pointer;
         }
 
-        &--hamburger svg{
-             height: 100%;
-             width: 100%;
+        &--hamburger svg {
+            height: 100%;
+            width: 100%;
         }
 
-        &--logo{
+        &--logo {
             font-size: 3rem;
             font-weight: bold;
             cursor: pointer;
+
+            @media (max-width: 600px) {
+                font-size: 2.5rem;
+            }
         }
 
-        &--searchbar{
+        &--searchbar {
             height: 100%;
-            
-            input{
+            position: relative;
+
+            label{
+                height: 2rem;
+                width: 2rem;
+                position: absolute;
+                left: 3%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            input {
                 height: 100%;
                 border: none;
-                width: 25vw ;
+                width: 25vw;
                 border-radius: 100px;
                 padding: 2rem;
                 padding-left: 4rem;
                 font-size: 1.3rem;
                 outline: none;
+
+                @media (max-width: 800px) {
+                    width: 30vw;
+                }
             }
         }
 
-            
+
     }
-    &__right{
+
+    &__right {
         height: inherit;
         @include flex-center(2rem);
-        & > *{
+
+        @media (max-width: 600px) {
+            gap: 1rem;
+        }
+
+        &>* {
             display: flex;
         }
-        &--line{
+
+        &--line {
             width: 1px;
             height: 100%;
             background: rgba(88, 88, 88, 0.51);
         }
 
-        &--plusIcon{
-            svg{
+        &--plusIcon {
+            svg {
                 transition: all .5s;
                 cursor: pointer;
             }
         }
 
         &--plusIcon:hover {
-            svg{
+            svg {
                 transform: scale(1.2);
             }
         }
 
-        &--notification{
+        &--notification {
             position: relative;
             cursor: pointer;
-            
-            &::before{
+
+            &::before {
                 height: 1rem;
                 width: 1rem;
                 background: red;
@@ -78,27 +115,37 @@
                 right: 2px;
             }
 
-            &:hover{
+            &:hover {
                 // transform: rotate(20deg);
                 transform-origin: top;
                 animation: ring .5s ease-out .2s 3 alternate;
             }
         }
 
-        &--image{
+        &--image {
             height: 100%;
             aspect-ratio: 1/1;
             border-radius: 50%;
             overflow: hidden;
         }
-        &--user{
+
+        &--user {
             font-size: 2rem;
-            font-weight: bold
+            font-weight: bold;
+            @media (max-width: 400px){
+                display: none;
+            }
         }
-        svg{
+
+        svg {
             height: 3rem;
             width: 3rem;
+
             // aspect-ratio: 1 / 1;
+            @media (max-width:400px) {
+                height: 2rem;
+                width: 2rem;
+            }
         }
     }
 }

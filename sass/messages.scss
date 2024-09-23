@@ -1,0 +1,120 @@
+.messages {
+    height: 100%;
+    width: 35%;
+
+    @media (max-width: 1000px) {
+        width: 45%;
+    }
+
+    @media (max-width: 800px) {
+        display: none;
+    }
+
+
+    &__header {
+        @include flex(0px);
+        align-items: end;
+        padding: 1.5rem 2rem;
+        height: 8rem;
+        border-bottom: 1px solid rgb(147, 147, 147);
+
+        h4 {
+            font-size: 2.2rem;
+            font-weight: bold
+        }
+
+        &--icon {
+            margin-left: auto;
+            height: 2.3rem;
+            width: 2.3rem;
+        }
+
+        &--options {
+            right: 2rem;
+            margin-left: 2rem;
+
+            &-dot {
+                height: .7rem;
+                aspect-ratio: 1/1;
+                background: black;
+                border-radius: 50%;
+                margin-bottom: .3rem;
+            }
+        }
+    }
+
+    &__container {
+        width: 100%;
+        height: 84vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        &--item {
+            display: flex;
+            align-items: center;
+            height: 12rem;
+            padding-inline: 2rem;
+            gap: 1rem;
+            transition: all .5s;
+            cursor: pointer;
+
+            &:hover {
+                background: white;
+                border-radius: 10px;
+                transform: translate(3px, 3px);
+                box-shadow: 2rem 3rem 8rem #0000002b;
+            }
+
+            @media (max-width: 800px) {
+                padding-inline: 1rem;
+            }
+
+            &-profile {
+                width: 15%;
+
+                &-image {
+                    height: 5rem;
+                    aspect-ratio: 1/1;
+                    overflow: hidden;
+                    border-radius: 50%;
+                }
+            }
+
+            &--content {
+                width: 85%;
+
+                &--header {
+                    @include flex-center(0px);
+                    justify-content: space-between;
+                    margin-bottom: .5rem;
+
+                    &-name {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                    }
+
+                    &-icon {
+                        height: 2rem;
+                        width: 2rem;
+                    }
+                }
+
+                &--text {
+                    font-size: 1.3rem;
+                }
+
+                &--date {
+                    font-size: 1.3rem;
+                    text-align: end;
+
+                }
+
+
+            }
+        }
+    }
+}
