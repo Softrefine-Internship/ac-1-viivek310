@@ -32,13 +32,15 @@
             transition: all .5s ease-out;
         }
 
-        &:hover::before{
+        &:hover::before,
+        &:first-child::before{
             opacity: 1;
             visibility: visible;
             scale: 2;
         }
 
-        &:hover{
+        &:hover,
+        &:first-child{
             color: white;
             svg{
                 scale: 1.2;

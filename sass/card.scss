@@ -5,99 +5,174 @@
     padding: 1.5rem 2rem;
     position: relative;
     background: $color3;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    position: relative;
 
-    &:nth-child(5n+2){
+    // box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    &::before,
+    &::after {
+        height: 3px;
+        width: 80%;
+        background: rgb(0, 187, 229);
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        border-radius: 100px;
+        transform-origin: left;
+        transition: .3s ease-in;
+    }
+
+    &::after {
+        width: 60%;
+        bottom: -20px;
+    }
+
+    &:hover::after,
+    &:hover::before{
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    &:nth-child(5n+2) {
         $background-color: rgb(237, 151, 13);
-        background: lighten(rgb(237, 151, 13),40%);
-        .project-card__progress--bar-input::-webkit-slider-thumb{
+        background: lighten($background-color, 40%);
+
+        .project-card__progress--bar-input::-webkit-slider-thumb {
             background: $background-color;
         }
-        .project-card__progress--bar-input::-webkit-slider-runnable-track{
+
+        .project-card__progress--bar-input::-webkit-slider-runnable-track {
             background: linear-gradient(90deg, $background-color 20%, white 20%);
         }
-        .project-card__line{
+
+        .project-card__line {
             background-color: white;
         }
-        .project-card__footer--plusIcon svg{
+
+        .project-card__footer--plusIcon svg {
             fill: $background-color;
         }
-        .project-card__footer--button-btn{
+
+        .project-card__footer--button-btn {
             background: white;
             color: $background-color;
         }
-        .project-card__footer--button-btn:hover{
-            color: darken($background-color,15%);
+
+        .project-card__footer--button-btn:hover {
+            color: darken($background-color, 15%);
         }
-    }
-    &:nth-child(5n+3){
-        $background-color: rgb(13, 237, 62);
-        background: lighten($background-color,40%);
-        .project-card__progress--bar-input::-webkit-slider-thumb{
+
+        &::after,
+        &::before {
             background: $background-color;
         }
-        .project-card__progress--bar-input::-webkit-slider-runnable-track{
+    }
+
+    &:nth-child(5n+3) {
+        $background-color: rgb(13, 237, 62);
+        background: lighten($background-color, 40%);
+
+        .project-card__progress--bar-input::-webkit-slider-thumb {
+            background: $background-color;
+        }
+
+        .project-card__progress--bar-input::-webkit-slider-runnable-track {
             background: linear-gradient(90deg, $background-color 50%, white 50%);
         }
-        .project-card__line{
+
+        .project-card__line {
             background-color: white;
         }
-        .project-card__footer--plusIcon svg{
+
+        .project-card__footer--plusIcon svg {
             fill: $background-color;
         }
-        .project-card__footer--button-btn{
+
+        .project-card__footer--button-btn {
             background: white;
             color: $background-color;
         }
-        .project-card__footer--button-btn:hover{
-            color: darken($background-color,15%);
+
+        .project-card__footer--button-btn:hover {
+            color: darken($background-color, 15%);
         }
-    }
-    &:nth-child(5n+4){
-        $background-color: rgb(229, 30, 146);
-        background: lighten($background-color,40%);
-        .project-card__progress--bar-input::-webkit-slider-thumb{
+
+        &::after,
+        &::before {
             background: $background-color;
         }
-        .project-card__progress--bar-input::-webkit-slider-runnable-track{
+
+    }
+
+    &:nth-child(5n+4) {
+        $background-color: rgb(229, 30, 146);
+        background: lighten($background-color, 40%);
+
+        .project-card__progress--bar-input::-webkit-slider-thumb {
+            background: $background-color;
+        }
+
+        .project-card__progress--bar-input::-webkit-slider-runnable-track {
             background: linear-gradient(90deg, $background-color 30%, white 30%);
         }
-        .project-card__line{
+
+        .project-card__line {
             background-color: white;
         }
-        .project-card__footer--plusIcon svg{
+
+        .project-card__footer--plusIcon svg {
             fill: $background-color;
         }
-        .project-card__footer--button-btn{
+
+        .project-card__footer--button-btn {
             background: white;
             color: $background-color;
         }
-        .project-card__footer--button-btn:hover{
-            color: darken($background-color,15%);
+
+        .project-card__footer--button-btn:hover {
+            color: darken($background-color, 15%);
         }
-    }
-    &:nth-child(5n+5){
-        $background-color: rgb(179, 30, 229);
-        background: lighten($background-color,40%);
-        .project-card__progress--bar-input::-webkit-slider-thumb{
+
+        &::after,
+        &::before {
             background: $background-color;
         }
-        .project-card__progress--bar-input::-webkit-slider-runnable-track{
+
+    }
+
+    &:nth-child(5n+5) {
+        $background-color: rgb(179, 30, 229);
+        background: lighten($background-color, 40%);
+
+        .project-card__progress--bar-input::-webkit-slider-thumb {
+            background: $background-color;
+        }
+
+        .project-card__progress--bar-input::-webkit-slider-runnable-track {
             background: linear-gradient(90deg, $background-color 60%, white 60%);
         }
-        .project-card__line{
+
+        .project-card__line {
             background-color: white;
         }
-        .project-card__footer--plusIcon svg{
+
+        .project-card__footer--plusIcon svg {
             fill: $background-color;
         }
-        .project-card__footer--button-btn{
+
+        .project-card__footer--button-btn {
             background: white;
             color: $background-color;
         }
-        .project-card__footer--button-btn:hover{
-            color: darken($background-color,5%);
+
+        .project-card__footer--button-btn:hover {
+            color: darken($background-color, 5%);
         }
+
+        &::after,
+        &::before {
+            background: $background-color;
+        }
+
     }
 
     &__options {
@@ -120,7 +195,7 @@
     }
 
     &__heading {
-        padding-block: 2rem .5rem;
+        padding-block: 2.5rem 1rem;
 
         h4 {
             font-weight: bold;
@@ -135,10 +210,11 @@
     }
 
     &__progress {
-        &--label{
+        &--label {
             font-size: 1.2rem;
             font-weight: bold;
         }
+
         &--bar {
             &-input {
                 -webkit-appearance: none;
@@ -149,6 +225,7 @@
                 border: none;
                 outline: none;
                 border-radius: 5px;
+
                 &::-webkit-slider-thumb {
                     -webkit-appearance: none;
                     appearance: none;
@@ -172,14 +249,15 @@
 
             }
         }
-        &--percentage{
+
+        &--percentage {
             text-align: end;
             font-size: 1.2rem;
             font-weight: bold
         }
     }
 
-    &__line{
+    &__line {
         height: 1px;
         width: inherit;
         margin-left: -2rem;
@@ -187,37 +265,49 @@
         margin-top: 1rem;
     }
 
-    &__footer{
+    &__footer {
         @include flex-center();
         // border: 2px solid red;
-        padding-top: 1rem;
+        padding-top: 2rem;
         height: 5rem;
-        &--images{
-            &-img{
-                height: 2.3rem;
+
+        &--images-img,
+        &--plusIcon svg {
+            height: 2rem;
+            fill: black
+        }
+
+        &--images {
+            @include flex-center(0px);
+
+            &-img {
                 aspect-ratio: 1/1;
                 border-radius: 50%;
                 overflow: hidden;
                 display: inline-block;
-                &:not(:first-child){
+
+                &:not(:first-child) {
                     margin-left: -10px;
                 }
             }
         }
-        &--plusIcon{
-            height: 100%;
+
+        &--plusIcon {
+            aspect-ratio: 1/1;
             display: flex;
             align-items: center;
-            svg{
-                height: 2.4rem;
+
+            svg {
+                height: 2rem;
                 margin-left: 5px;
                 fill: rgb(0, 187, 229);
-            }  
-        } 
+            }
+        }
 
-        &--button{
+        &--button {
             margin-left: auto;
-            &-btn{
+
+            &-btn {
                 all: unset;
                 background: rgba(0, 187, 229, 0.137);
                 color: rgb(0, 187, 229);
@@ -225,11 +315,12 @@
                 padding: .5rem 1.3rem;
                 border-radius: 50px;
                 font-size: 1.2rem;
-                transition:all .5s;
-                &:hover{
-                    color: darken(rgb(0, 187, 229),5%);
+                transition: all .5s;
+
+                &:hover {
+                    color: darken(rgb(0, 187, 229), 5%);
                 }
-            }   
+            }
         }
     }
 }
