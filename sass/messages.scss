@@ -46,8 +46,9 @@
 
     &__container {
         width: 100%;
-        height: 94vh;
+        height: 75%;
         overflow-y: scroll;
+        overflow-x: hidden;
         border-bottom-right-radius: 30px;
 
 

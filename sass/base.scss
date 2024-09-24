@@ -1,22 +1,21 @@
 .portfolio{
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: 100svh;
     min-height: 90svh;
-    background: $color1;
+    background: #F3F6FD;
     margin: 0 auto;
     border-radius: 3rem;
     box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.174);
     padding-top: 2rem;
-    margin: 5rem;
     padding-bottom: 0;
     overflow: hidden;
     @media (max-width: 800px){
         margin: 0;
         width: 100%;
     }
-    @media (max-width: 800px){
-        height: 100svh;
-    }
+    // @media (max-width: 800px){
+    //     height: 100svh;
+    // }
 }
 
 .main-container{
@@ -34,10 +33,13 @@
 }
 
 .projects-container{
-    @include flex-center;
-    height: 90svh;
+    // @include flex-center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    // grid-template-rows: repeat(auto-fill,30rem);
+    height: 80.5%;
     width: 100%;
-    padding-block: 5rem;
+    padding-bottom: 5rem;
     flex-wrap: wrap;
     gap: 5rem;
     // overflow: auto;
@@ -49,6 +51,7 @@
 
 
     @media (max-width: 1000px){
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
         padding-block: 3rem;
         padding-bottom: 8rem;
         height: 91svh;

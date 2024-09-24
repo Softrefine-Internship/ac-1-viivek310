@@ -1,6 +1,6 @@
 .project-card {
-    height: 23rem;
-    width: 25rem;
+    height: 25rem;
+    width: 100%;
     border-radius: 30px;
     padding: 1.5rem 2rem;
     position: relative;
@@ -259,16 +259,16 @@
 
     &__line {
         height: 1px;
-        width: inherit;
+        width: 120%;
         margin-left: -2rem;
         background: rgb(215, 215, 215);
-        margin-top: 1rem;
+        margin-top: 2.5rem;
     }
 
     &__footer {
         @include flex-center();
         // border: 2px solid red;
-        padding-top: 2rem;
+        padding-top: 3rem;
         height: 5rem;
 
         &--images-img,

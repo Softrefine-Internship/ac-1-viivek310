@@ -1,31 +1,32 @@
 .header {
     @include flex-center;
     justify-content: space-between;
-    height: 4rem;
+    height: 3.6rem;
     padding: 0 4rem;
     @media(max-width:400px){
-        padding: 0 2rem;
+        padding: 0 3.5rem;
     }
 
     &__left {
         @include flex-center(8rem);
         height: 100%;
 
-        @media (max-width: 1000px) {
-            gap: 5rem;
-        }
+        // @media (max-width: 1000px) {
+        //     gap: 5rem;
+        // }
 
-        @media (max-width: 750px) {
-            gap: 2rem;
+        @media (max-width: 800px) {
+            gap: 6rem;
         }
 
         @media (max-width: 420px) {
-            gap: 1rem;
+            gap: 3rem;
         }
 
         &--hamburger {
             height: 70%;
             cursor: pointer;
+            flex-shrink: 0;
         }
 
         &--hamburger svg {
@@ -46,6 +47,13 @@
         &--searchbar {
             height: 100%;
             position: relative;
+            margin-left: -35px;
+                @media(max-width: 420px){
+                    margin-left: 0;
+                }
+            @media(max-width: 370px){
+                margin-left: -20px;
+            }
 
             label{
                 height: 2rem;
@@ -69,6 +77,10 @@
                 @media (max-width: 800px) {
                     width: 30vw;
                 }
+
+                &:focus{
+                    outline: 1px solid black;
+                }
             }
         }
 
@@ -81,6 +93,9 @@
 
         @media (max-width: 600px) {
             gap: 1rem;
+        }
+        @media (max-width: 400px) {
+            gap: .4rem;
         }
 
         &>* {
