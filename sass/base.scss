@@ -34,13 +34,18 @@
     display: flex
 }
 
-.content.chat-open .projects{
-    display: none;
+.content.chat-open .projects {
+    @media(max-width:800px) {
+        display: none;
+    }
 }
 
-.content.chat-open .messages{
-    display: block;
-    width: 100%;
+.content.chat-open .messages {
+    @media(max-width:800px) {
+        display: block;
+        width: 100%;
+    }
+
 }
 
 .projects-container {
@@ -63,7 +68,7 @@
     }
 
 
-    @media (max-width: 1000px) { 
+    @media (max-width: 1000px) {
         padding-block: 3rem;
         padding-bottom: 8rem;
         height: 91svh;
@@ -82,7 +87,8 @@
     margin-top: 1rem;
     display: none;
     text-align: center;
-    @media(max-width: 600px){
+
+    @media(max-width: 600px) {
         display: block;
     }
 

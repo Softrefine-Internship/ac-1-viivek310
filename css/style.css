@@ -72,12 +72,14 @@ svg {
   padding-top: 2rem;
   display: flex; }
 
-.content.chat-open .projects {
-  display: none; }
+@media (max-width: 800px) {
+  .content.chat-open .projects {
+    display: none; } }
 
-.content.chat-open .messages {
-  display: block;
-  width: 100%; }
+@media (max-width: 800px) {
+  .content.chat-open .messages {
+    display: block;
+    width: 100%; } }
 
 .projects-container {
   display: grid;
@@ -588,7 +590,7 @@ svg {
     gap: 0px;
     align-items: end;
     padding: 1.5rem 2rem;
-    height: 8rem;
+    height: 6.5rem;
     border-bottom: 1px solid #939393; }
     .messages__header h4 {
       font-size: 2.2rem;
