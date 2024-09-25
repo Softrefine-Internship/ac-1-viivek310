@@ -55,6 +55,12 @@
         }
        
         &-item{
+
+            &:nth-child(4){
+                .projects__statistics-item--detail::before{
+                    display: none;
+                }
+            }
             &--number{
                 font-size: 1.7rem;
                 font-weight: bold;
@@ -74,6 +80,7 @@
                         display: none;
                     }
                 }
+                
             }
         }
 
@@ -81,6 +88,7 @@
             display: flex;
             gap: 1rem;
             margin-left: auto;
+            align-items: flex-start !important;
             &--hamburger{
                 margin-left: auto;
                 scale: 1.1;

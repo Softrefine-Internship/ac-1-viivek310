@@ -72,6 +72,13 @@ svg {
   padding-top: 2rem;
   display: flex; }
 
+.content.chat-open .projects {
+  display: none; }
+
+.content.chat-open .messages {
+  display: block;
+  width: 100%; }
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -87,7 +94,6 @@ svg {
     display: none; }
   @media (max-width: 1000px) {
     .projects-container {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       padding-block: 3rem;
       padding-bottom: 8rem;
       height: 91svh;
@@ -96,6 +102,40 @@ svg {
     .projects-container {
       padding-bottom: 15rem; } }
 
+.searchbar-secendory {
+  height: 100%;
+  position: relative;
+  margin-top: 1rem;
+  display: none;
+  text-align: center; }
+  @media (max-width: 600px) {
+    .searchbar-secendory {
+      display: block; } }
+  .searchbar-secendory label {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    left: 13%;
+    top: 50%;
+    transform: translateY(-50%); }
+  .searchbar-secendory input {
+    height: 100%;
+    border: none;
+    width: 80%;
+    border-radius: 100px;
+    padding: 2rem;
+    padding-left: 6rem;
+    font-size: 1.8rem;
+    outline: none; }
+    .searchbar-secendory input:focus {
+      outline: 1px solid black; }
+    .searchbar-secendory input::placeholder {
+      font-size: 18px;
+      color: #999; }
+      @media (max-width: 600px) {
+        .searchbar-secendory input::placeholder {
+          font-size: 14px; } }
+
 .header {
   display: flex;
   justify-content: center;
@@ -103,10 +143,7 @@ svg {
   gap: 0;
   justify-content: space-between;
   height: 3.6rem;
-  padding: 0 4rem; }
-  @media (max-width: 400px) {
-    .header {
-      padding: 0 3.5rem; } }
+  padding: 0 3.5rem; }
   .header__left {
     display: flex;
     justify-content: center;
@@ -116,9 +153,6 @@ svg {
     @media (max-width: 800px) {
       .header__left {
         gap: 6rem; } }
-    @media (max-width: 420px) {
-      .header__left {
-        gap: 3rem; } }
     .header__left--hamburger {
       height: 70%;
       cursor: pointer;
@@ -130,13 +164,13 @@ svg {
       font-size: 3rem;
       font-weight: bold;
       cursor: pointer; }
-      @media (max-width: 600px) {
-        .header__left--logo {
-          font-size: 2.5rem; } }
     .header__left--searchbar {
       height: 100%;
       position: relative;
       margin-left: -35px; }
+      @media (max-width: 600px) {
+        .header__left--searchbar {
+          display: none; } }
       @media (max-width: 420px) {
         .header__left--searchbar {
           margin-left: 0; } }
@@ -167,18 +201,15 @@ svg {
         .header__left--searchbar input::placeholder {
           font-size: 18px;
           color: #999; }
+          @media (max-width: 600px) {
+            .header__left--searchbar input::placeholder {
+              font-size: 14px; } }
   .header__right {
     height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem; }
-    @media (max-width: 600px) {
-      .header__right {
-        gap: 1rem; } }
-    @media (max-width: 400px) {
-      .header__right {
-        gap: .4rem; } }
     .header__right > * {
       display: flex; }
     .header__right--line {
@@ -217,10 +248,6 @@ svg {
     .header__right svg {
       height: 3rem;
       width: 3rem; }
-      @media (max-width: 400px) {
-        .header__right svg {
-          height: 2rem;
-          width: 2rem; } }
 
 .navigation {
   min-height: 80svh;
@@ -310,6 +337,8 @@ svg {
     @media (max-width: 370px) {
       .projects__statistics {
         gap: .5rem; } }
+    .projects__statistics-item:nth-child(4) .projects__statistics-item--detail::before {
+      display: none; }
     .projects__statistics-item--number {
       font-size: 1.7rem;
       font-weight: bold; }
@@ -330,6 +359,7 @@ svg {
       display: flex;
       gap: 1rem;
       margin-left: auto;
+      align-items: flex-start !important;
       align-items: center; }
       .projects__statistics-nav--hamburger {
         margin-left: auto;

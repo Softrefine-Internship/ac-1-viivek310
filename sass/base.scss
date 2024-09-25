@@ -1,4 +1,4 @@
-.portfolio{
+.portfolio {
     width: 100%;
     height: 100svh;
     min-height: 90svh;
@@ -9,33 +9,44 @@
     padding-top: 2rem;
     padding-bottom: 0;
     overflow: hidden;
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         margin: 0;
         width: 100%;
     }
+
     // @media (max-width: 800px){
     //     height: 100svh;
     // }
 }
 
-.main-container{
-//    @include flex-center();
+.main-container {
+    //    @include flex-center();
     display: flex;
-   width: 100%;  
-   height: 110%;
-   position: relative;
+    width: 100%;
+    height: 110%;
+    position: relative;
 }
 
-.content{
+.content {
     width: 100%;
     padding-top: 2rem;
     display: flex
 }
 
-.projects-container{
+.content.chat-open .projects{
+    display: none;
+}
+
+.content.chat-open .messages{
+    display: block;
+    width: 100%;
+}
+
+.projects-container {
     // @include flex-center;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     // grid-template-rows: repeat(auto-fill,30rem);
     height: 80.5%;
     width: 100%;
@@ -46,21 +57,65 @@
     overflow-y: auto;
     overflow-x: hidden;
     align-content: baseline;
+
     &::-webkit-scrollbar {
         display: none;
-      }
+    }
 
 
-    @media (max-width: 1000px){
-        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    @media (max-width: 1000px) { 
         padding-block: 3rem;
         padding-bottom: 8rem;
         height: 91svh;
         gap: 3rem;
     }
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         padding-bottom: 15rem;
     }
 }
 
 
+.searchbar-secendory {
+    height: 100%;
+    position: relative;
+    margin-top: 1rem;
+    display: none;
+    text-align: center;
+    @media(max-width: 600px){
+        display: block;
+    }
+
+    label {
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        left: 13%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    input {
+        height: 100%;
+        border: none;
+        width: 80%;
+        border-radius: 100px;
+        padding: 2rem;
+        padding-left: 6rem;
+        font-size: 1.8rem;
+        outline: none;
+
+        &:focus {
+            outline: 1px solid black;
+        }
+
+        &::placeholder {
+            font-size: 18px;
+            color: #999;
+
+            @media(max-width: 600px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

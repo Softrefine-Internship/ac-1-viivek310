@@ -2,10 +2,10 @@
     @include flex-center;
     justify-content: space-between;
     height: 3.6rem;
-    padding: 0 4rem;
-    @media(max-width:400px){
-        padding: 0 3.5rem;
-    }
+    padding: 0 3.5rem;
+    // @media(max-width:400px){
+    //     padding: 0 3.5rem;
+    // }
 
     &__left {
         @include flex-center(8rem);
@@ -19,9 +19,9 @@
             gap: 6rem;
         }
 
-        @media (max-width: 420px) {
-            gap: 3rem;
-        }
+        // @media (max-width: 420px) {
+        //     gap: 3rem;
+        // }
 
         &--hamburger {
             height: 70%;
@@ -39,23 +39,25 @@
             font-weight: bold;
             cursor: pointer;
 
-            @media (max-width: 600px) {
-                font-size: 2.5rem;
-            }
         }
 
         &--searchbar {
             height: 100%;
             position: relative;
             margin-left: -35px;
-                @media(max-width: 420px){
-                    margin-left: 0;
-                }
-            @media(max-width: 370px){
+            @media(max-width:600px){
+                display: none;
+            }
+
+            @media(max-width: 420px) {
+                margin-left: 0;
+            }
+
+            @media(max-width: 370px) {
                 margin-left: -20px;
             }
 
-            label{
+            label {
                 height: 2rem;
                 width: 2rem;
                 position: absolute;
@@ -78,13 +80,18 @@
                     width: 30vw;
                 }
 
-                &:focus{
+                &:focus {
                     outline: 1px solid black;
                 }
+
                 &::placeholder {
-                    font-size: 18px; 
-                    color: #999;     
-                  }
+                    font-size: 18px;
+                    color: #999;
+
+                    @media(max-width: 600px) {
+                        font-size: 14px;
+                    }
+                }
             }
         }
 
@@ -95,12 +102,13 @@
         height: inherit;
         @include flex-center(2rem);
 
-        @media (max-width: 600px) {
-            gap: 1rem;
-        }
-        @media (max-width: 400px) {
-            gap: .4rem;
-        }
+        // @media (max-width: 600px) {
+        //     gap: 1rem;
+        // }
+
+        // @media (max-width: 400px) {
+        //     gap: .4rem;
+        // }
 
         &>* {
             display: flex;
@@ -128,7 +136,7 @@
         &--notification {
             position: relative;
             cursor: pointer;
-            transition: transform .6s ;
+            transition: transform .6s;
 
             &::before {
                 height: 1rem;
@@ -155,7 +163,8 @@
         &--user {
             font-size: 2rem;
             font-weight: bold;
-            @media (max-width: 600px){
+
+            @media (max-width: 600px) {
                 display: none;
             }
         }
@@ -165,10 +174,10 @@
             width: 3rem;
 
             // aspect-ratio: 1 / 1;
-            @media (max-width:400px) {
-                height: 2rem;
-                width: 2rem;
-            }
+            // @media (max-width:400px) {
+            //     height: 2rem;
+            //     width: 2rem;
+            // }
         }
     }
 }
