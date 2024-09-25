@@ -60,7 +60,7 @@
                 width: 2rem;
                 position: absolute;
                 left: 3%;
-                top: 50%;
+                top: 55%;
                 transform: translateY(-50%);
             }
 
@@ -71,7 +71,7 @@
                 border-radius: 100px;
                 padding: 2rem;
                 padding-left: 4rem;
-                font-size: 1.3rem;
+                font-size: 1.8rem;
                 outline: none;
 
                 @media (max-width: 800px) {
@@ -81,6 +81,10 @@
                 &:focus{
                     outline: 1px solid black;
                 }
+                &::placeholder {
+                    font-size: 18px; 
+                    color: #999;     
+                  }
             }
         }
 

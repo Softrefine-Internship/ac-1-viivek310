@@ -44,6 +44,7 @@
     gap: 5rem;
     // overflow: auto;
     overflow-y: auto;
+    overflow-x: hidden;
     align-content: baseline;
     &::-webkit-scrollbar {
         display: none;

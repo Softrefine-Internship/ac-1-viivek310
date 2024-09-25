@@ -1,10 +1,16 @@
-.navigation{
+.navigation {
     min-height: 80svh;
     width: 10rem;
     padding: 6rem 3rem;
 
+    &.closed {
+        background: red;
+        transform: scale(0);
+        padding: 0;
+        width: 0;
+    }
 
-    &__icon{
+    &__icon {
         width: 3rem;
         aspect-ratio: 1/1;
         margin: 0 auto;
@@ -15,32 +21,34 @@
         z-index: 2;
         @include flex-center(0px);
 
-        svg{
+        svg {
             transition: all .5s;
         }
-        &::before{
+
+        &::before {
             height: 100%;
-           aspect-ratio: 1/1;
+            aspect-ratio: 1/1;
             background: black;
             z-index: -1;
             border-radius: 50%;
             opacity: 0;
             visibility: hidden;
             transition: all .5s ease-out;
-           
+
         }
 
         &:hover::before,
-        &:first-child::before{
+        &:first-child::before {
             opacity: 1;
             visibility: visible;
             scale: 2;
         }
 
         &:hover,
-        &:first-child{
+        &:first-child {
             color: white;
-            svg{
+
+            svg {
                 scale: 1.2;
             }
         }
